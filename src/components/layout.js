@@ -10,8 +10,10 @@ import {
 
 const Layout = ({ pageTitle, children }) => {
   return (
-    <div className={container}>
-      <nav>
+       <div className={container}>
+        <h1>My Gatsby Sample Website</h1><br/>
+       <nav>
+      <center>
         <ul className={navLinks}>
           <li className={navLinkItem}><Link to="/" className = {navLinkText}><b>Home</b></Link></li>
           <li className={navLinkItem}><Link to="/about" className = {navLinkText}><b>About</b></Link></li>
@@ -19,12 +21,15 @@ const Layout = ({ pageTitle, children }) => {
           <li className={navLinkItem}><Link to="/blogs" className = {navLinkText}><b>Blogs</b></Link></li>
 
         </ul>
+        </center>
       </nav>
+     
       <main>
         <h1 className ={heading}>{pageTitle}</h1>
         {children}
       </main>
     </div>
+   
   )
 }
 
